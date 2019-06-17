@@ -1,0 +1,3 @@
+module.exports = {
+    'token_secret': 'W9>YK=6G!Q)nAV2(gA45<835Jir>C7SL4D/J26f>7:N:PR=*!aW-VjkMtRn!Md<v[2Dv7X39]Vbr*#6h6Qg@98i6W€w592$Un€8g42e[A-tm/66r6s2Y#p@Zs<hWin]bN7PuKrE[P*.24c7%3µ}Nxp7AC8*tYCw+8@=4~&ycaJPxpK€Gt47bxQ7*x€yybxYVy26C76<]6Qjht[--E,uiR5w3223>77L599W4+76vR9€23WN6G5:96+^ANNGJ6dP9!RBTµ£dD8DxmN3{r8f89r$2R[J+64u*iXQ@7!M4z*%_][t(,2R5yw??=3,KWZsZD5C[wN)N>C5[U<gWuxq+53Vgrxn>:2&TZEdpzFPn5µwJ49jS258!Y2£JL6e:pz[n£SE&qm7ketb[63B4w€4^fGasH.{99UBpwq~;)?44'
+};

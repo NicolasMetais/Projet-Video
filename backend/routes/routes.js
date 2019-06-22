@@ -56,7 +56,7 @@ module.exports = function (app) {
 
   //Login check
   app.route("/login")
-    .get(AuthController.authenticate);
+    .post(AuthController.authenticate);
 
   //Register
   app.route("/register")

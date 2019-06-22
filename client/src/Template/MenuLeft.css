@@ -1,43 +1,53 @@
 #MenuLeftOpen {
     display: flex;
     flex-direction: column;
-    background-color:rgb(34, 32, 32, 0.9);
     color: #FFFF;
+    position: fixed !important;
+    align-self: flex-start;
+    height: 95%;
+    width: 16.5%;
+    left: 0;
+    top: 7.9%;
+}
+
+#MenuOpen{
+    background-color:rgb(34, 32, 32, 0.97);
+    height: 100%;
+}
+
+#MenuClose {
+    background-color:rgb(34, 32, 32, 0.97);
     width: 17%;
     height: 100%;
-    position: fixed;
-    left: 0;
 }
+
 
 #MenuLeftClose {
     display: flex;
     flex-direction: column;
-    background-color:rgb(34, 32, 32, 0.9);
     color: #FFFF;
-    width: 12%;
-    height: 100%;
     position: fixed;
+    background-color:rgb(34, 32, 32, 0.9);
     left: 0;
 }
 
 #logo {
-    margin-left: 5%;
-    height: 70%;
-    width: 30%;
-    margin-top: 0.3%;
+    margin-left: 35%;
+    margin-top: 3%;
+    height: 60%;
+    width: 25%;
 }
 
 #burger {
-    margin-left: 1%;
-    padding-top: 0.3%;
-    width: 15%;
-    height: 45%;
+    margin-left: 10%;
+    width: 10%;
+    height: 50%;
 }
 
 #UlMenu {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
 }
 
 .paddingtop {
@@ -49,34 +59,59 @@
 }
 
 .Link {
-    border-bottom: ridge 1px rgb(40, 40, 40, 0.90);
-    margin-bottom: 5%;
+    border-bottom: ridge 1px rgba(10, 10, 10, 0.9);
+    margin-bottom: 0%;
 }
 
-
-.MenuImg {
-    width: 15%;
+.MenuImgOpen {
+    width: 3%;
     height: 12%;
 }
 
-.MenuImg2 {
-    width: 15%;
-    height: 12%;
+.MenuImgClose {
+    width: 58.20%;
+    margin-bottom: 4%;
+    margin-right: 20%;
+    height: 1%;
+}
+
+.active {
+    color: white;
 }
 
 .LiMenuOpen{
     display:flex;
     align-items: center;
-    margin-left: 20%;
-    margin-bottom: 6%;
+    margin-bottom: 5%;
+    padding-left: 8%;
+    padding-top: 4.509%;
+    padding-bottom: 5%;
+}
+
+.LiMenuOpen:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+.LiMenuClose:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+.LiMenuClose2:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+.LiMenuOpen2:hover{
+    background-color: rgb(77, 75, 75);
 }
 
 .LiMenuClose{
-    display:flex;
-    align-items: center;
-    margin-left: 20%;
-    margin-bottom: 6%;
-    width: 18%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    margin-right: -15%;
+    width: 79%;
     height: 50%;
     flex-wrap: wrap;
 }
@@ -84,41 +119,51 @@
 .LiMenuOpen2{
     display:flex;
     align-items: center;
-    margin-left: 20%;
-    margin-bottom: 16%;
+    margin-bottom: 5%;
+    padding-left: 8%;
+    padding-top: 4.509%;
+    padding-bottom: 5%;
 }
 
 .LiMenuClose2{
     display:flex;
-    align-items: center;
-    margin-left: 20%;
-    margin-bottom: 16%;
-    width: 18%;
+    justify-content: center;
+    padding-left: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    width: 79%;
     height: 50%;
     flex-wrap: wrap;
 }
 
 .MenuLinkOpen {
-    margin-left: 13%;
+    margin-left: 12%;
     width: 50%;
     height: 12%;
+    color: white;
+    text-decoration-line: none;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 2.1rem;
+    align-self: flex-end;
 }
 
 .MenuLinkClose {
-    font-size: 0.5rem;
-    flex-direction: column;
-    flex-wrap: wrap;
+    font-size: 0.53rem;
+    margin-right: 22%;
 }
 
-#UlFooter {
-    margin-top: 150%;
+#UlFooterOpen {
+    position: relative;
+    top: 63.7%;
     list-style: none;
     display: flex;
     font-size: 0.6rem;
     margin-left: -5%;
+}
+
+#UlFooterClose {
+    display: none;
 }
 
 .LiFooter {

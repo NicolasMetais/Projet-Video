@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
 import './MenuRight.css';
+import getjwt from '../helper'
 
 
 export default class MenuRight extends Component {
-    render() {
-        return (
-            <div id="MenuRight">
+    constructor(props) {
+        super(props)
+        this.state = {
+            user: false
+        }
+    }
+    componentDidMount() {
+        this.didUserIsHere()
+    }
 
-            </div>
-        );
+    didUserIsHere() {
+        const jwt = getjwt();
+        if (jwt) {
+            this.setState({ user: true })
+        }
+    }
+
+    render() {
+        if (this.state.user === true) {
+            return (
+                <div id="MenuRight">
+                    {console.log(this.state.user)}
+
+                </div>
+            );
+        } else return null;
     }
 }

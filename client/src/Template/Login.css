@@ -1,0 +1,54 @@
+#LogIn {
+    width: 30%;
+}
+
+#DivFormLogIn{
+    background-color:rgb(56, 56, 56);
+    color: #FFFF;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.InputLog {
+    width: 80%;
+    border-radius: 5px;
+    border: solid 1px rgb(48, 48, 48);
+    background-color:rgba(22, 21, 21, 1);
+    color: #FFFF;
+}
+
+.InputLog:focus{
+    outline: none;
+}
+
+#InputSubmit {
+    width: 25%;
+}
+
+.InputSubmit:focus{
+    outline: none;
+}
+#FormLogIn{
+    margin-bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ProfilImg{
+    margin-left: 85%;
+    margin-top: 2%;
+    width: 12.5%;
+    height: 73%;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid black;
+}

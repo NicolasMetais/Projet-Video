@@ -23,11 +23,11 @@ CREATE TABLE videos (
 )
 ENGINE=INNODB;
 
-INSERT INTO videos
+/* INSERT INTO videos
 VALUES
     (NULL, 'Salutatouslesamis', 'pseudo1', 0, 'grosse video easy', '1994-04-23', 'image/img.jpg'
         , 'image/videos/coucou.mp4', 2, 1),
-    (NULL, 'huiuhjijbhjijh', 'pseudo2', 1, 'trop bien', '1993-09-29', 'image/img1.png' , 'image/videos/rjfo.mp4', 1, 3);
+    (NULL, 'huiuhjijbhjijh', 'pseudo2', 1, 'trop bien', '1993-09-29', 'image/img1.png' , 'image/videos/rjfo.mp4', 1, 3); */
 
 CREATE TABLE categories (
     category_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,8 +52,10 @@ CREATE TABLE users (
 (20),
     pseudo VARCHAR
 (30),
+    profilPic VARCHAR
+(100), 
     email VARCHAR
-(50),
+(50) UNIQUE,
     password_user VARCHAR
 (500),
     role_id INT,
@@ -63,10 +65,10 @@ CREATE TABLE users (
 )
 ENGINE=INNODB;
 
-INSERT INTO users
+/* INSERT INTO users
 VALUES
-    (NULL, 'Metais', 'Nicolas', 'Larks', 'aaa@gmail.com', 'coucou', 1 , '1995-03-15', 'homme'),
-    (NULL, 'hij', 'jjhjj', 'ooppo', 'bbbb@gmail.com', 'mdp', 2, '1934-12-12', 'femme');
+    (NULL, 1, 'Metais', 'Nicolas', 'Larks', 'Images/Profil.png', 'aaa@gmail.com', 'coucou', 1 , '1995-03-15', 'homme'),
+    (NULL, 2, 'hij', 'jjhjj', 'ooppo', 'Images/Profil.png', 'bbbb@gmail.com', 'mdp', 2, '1934-12-12', 'femme'); */
 
 CREATE TABLE roles (
     role_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -91,10 +93,23 @@ CREATE TABLE Comments (
 )
 ENGINE=INNODB;
 
-INSERT INTO comments
-VALUES
-    (NULL, 'trop bien wesh', 1, 1, '1934-04-13'),
-    (NULL, 'wesh la famille', 2, 2, '1993-08-23');
+CREATE TABLE Subscribe (
+    subscribe_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    follow_id INT
+)
+ENGINE=INNODB;
+
+CREATE TABLE Follow (
+    follow_id INT PRIMARY KEY AUTO_INCREMENT
+)
+ENGINE=INNODB;
+
+ALTER TABLE Subscribe
+ADD CONSTRAINT fk_SubscribeToUser FOREIGN KEY (user_id) REFERENCES users(user_id);
+
+ALTER TABLE Subscribe
+ADD CONSTRAINT fk_SubscribeToFollow FOREIGN KEY (follow_id) REFERENCES Follow(follow_id);
 
 ALTER TABLE videos
 ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users (user_id);

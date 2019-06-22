@@ -29,14 +29,12 @@ model.selectSomething = function (data, result) {
     }
 
     if (data.tableWhere !== undefined) {
-        var where = data.id;
+        var where = data.where;
         var tableWhere = data.tableWhere;
         query = query + " WHERE " + tableWhere + " = " + sql.escape(where)
 
     }
-    console.log(query);
     sql.query(query, function (err, res) {
-        console.log(res)
         if (err) result(null, err);
         result(null, res);
     });

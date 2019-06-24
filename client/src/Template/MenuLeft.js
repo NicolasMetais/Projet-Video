@@ -73,13 +73,13 @@ export default class MenuLeft extends Component {
                         </ul>
                         <ul id={(this.state.UlFooterClose ? 'UlFooterClose' : '' | this.state.UlFooterOpen ? 'UlFooterOpen' : '')}>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/About"> About</NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/About"> About</NavLink>
                             </li>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/Contact"> Contact Us </NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/Contact"> Contact Us </NavLink>
                             </li>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/CGU">CGU</NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/CGU">CGU</NavLink>
                             </li>
                         </ul>
                     </div>
@@ -101,13 +101,13 @@ export default class MenuLeft extends Component {
                         </ul>
                         <ul id={(this.state.UlFooterClose ? 'UlFooterClose' : '' | this.state.UlFooterOpen ? 'UlFooterOpen' : '')}>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/About"> About</NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/About"> About</NavLink>
                             </li>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/Contact"> Contact Us </NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/Contact"> Contact Us </NavLink>
                             </li>
                             <li className="LiFooter">
-                                <NavLink activeClassname="active" to="/CGU">CGU</NavLink>
+                                <NavLink className="LinkFoot" activeClassname="active" to="/CGU">CGU</NavLink>
                             </li>
                         </ul>
                     </div>

@@ -1,29 +1,30 @@
 #header{
     display: flex;
     width: 100%;
-    height: 5%;
+    height: 8%;
     background-color:rgb(40, 40, 40, 0.98);
     position: sticky;
     position: -webkit-sticky;
-    z-index: 200000011;
+    z-index: 100000000;
     top: 0;
+    order: 0;
 }
 
 #FakeHeader {
-    height: 5.25%;
-    background-color: rgb(40, 40, 40, 0.98); 
+    height: 100%;
 }
 
 #logo {
     margin-left: 35%;
     margin-top: 3%;
-    height: 60%;
-    width: 25%;
+    height: 50%;
+    width: 20%;
 }
 
 #burger {
-    margin-left: 10%;
-    width: 10%;
+    margin-top: 5%;
+    margin-left: 14%;
+    width: 6%;
     height: 50%;
 }
 
@@ -63,13 +64,6 @@
 
 #avatar{
     margin-left: 0%;
-}
-
-#burger{
-    width: 1.5%;
-    margin-top: 0.7%;
-    margin-left: 2%;
-    height: 50%;
 }
 
 #imgForm {

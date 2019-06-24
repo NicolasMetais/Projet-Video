@@ -30,6 +30,7 @@
 .InputSubmit:focus{
     outline: none;
 }
+
 #FormLogIn{
     margin-bottom: 8%;
     display: flex;

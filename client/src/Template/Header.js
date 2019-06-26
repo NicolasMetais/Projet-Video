@@ -14,17 +14,20 @@ export default class Header extends Component {
 
     handleclick() {
         this.setState({ toggle: !this.state.toggle });
+        let toggle = this.state.toggle;
+        this.props.switchInDaddy(toggle);
     }
+
     render() {
         return (
             <header id='header'>
                 <div id="FakeHeader">
-                    <img id="burger" src="Images/Burger.png" onClick={this.menu} />
-                    <img id="logo" src="Images/Carre.gif" />
+                    <img id="burger" src="Images/Burger.png" alt="Interaction Menu" onClick={this.handleclick} />
+                    <img id="logo" src="Images/Carre.gif" alt="logo" />
                 </div>
                 <form id="searchForm">
                     <input id="inputForm" type="text" />
-                    <button id="submitForm" type="Submit"> <img id="imgForm" src="Images/Search.png" /></button >
+                    <button id="submitForm" type="Submit"> <img id="imgForm" src="Images/Search.png" alt="submit" /></button >
                 </form>
                 <Login />
             </header>

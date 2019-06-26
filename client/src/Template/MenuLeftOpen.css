@@ -4,7 +4,7 @@
     color: #FFFF;
     position: absolute;
     align-self: flex-start;
-        background-color:rgb(34, 32, 32, 0.97);
+    background-color:rgb(34, 32, 32, 0.97);
     height: 91.9%;
     width: 16.5%;
     left: 0;
@@ -20,16 +20,6 @@
     background-color:rgb(34, 32, 32, 0.97);
     width: 17%;
     height: 100%;
-}
-
-
-#MenuLeftClose {
-    display: flex;
-    flex-direction: column;
-    color: #FFFF;
-    position: fixed;
-    background-color:rgb(34, 32, 32, 0.9);
-    left: 0;
 }
 
 #UlMenu {
@@ -76,34 +66,15 @@
     padding-left: 8%;
     padding-top: 4.509%;
     padding-bottom: 5%;
+    margin-top: 5%;
 }
 
 .LiMenuOpen:hover{
     background-color: rgb(77, 75, 75);
 }
 
-.LiMenuClose:hover{
-    background-color: rgb(77, 75, 75);
-}
-
-.LiMenuClose2:hover{
-    background-color: rgb(77, 75, 75);
-}
-
 .LiMenuOpen2:hover{
     background-color: rgb(77, 75, 75);
-}
-
-.LiMenuClose{
-    display: flex;
-    justify-content: center;
-    padding-left: 20%;
-    padding-top: 15%;
-    padding-bottom: 15%;
-    margin-right: -15%;
-    width: 79%;
-    height: 50%;
-    flex-wrap: wrap;
 }
 
 .LiMenuOpen2{
@@ -113,17 +84,7 @@
     padding-left: 8%;
     padding-top: 4.509%;
     padding-bottom: 5%;
-}
-
-.LiMenuClose2{
-    display:flex;
-    justify-content: center;
-    padding-left: 20%;
-    padding-top: 15%;
-    padding-bottom: 15%;
-    width: 79%;
-    height: 50%;
-    flex-wrap: wrap;
+    margin-top: 5%;
 }
 
 .MenuLinkOpen {
@@ -138,11 +99,6 @@
     align-self: flex-end;
 }
 
-.MenuLinkClose {
-    font-size: 0.53rem;
-    margin-right: 22%;
-}
-
 #UlFooterOpen {
     position: absolute;
     top: 95.1%;
@@ -151,11 +107,6 @@
     font-size: 0.6rem;
     margin-left: -5%;
 }
-
-#UlFooterClose {
-    display: none;
-}
-
 
 .LinkFoot {
     text-decoration: none;

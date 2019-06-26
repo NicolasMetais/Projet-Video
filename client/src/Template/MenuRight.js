@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './MenuRight.css';
-import getjwt from '../helper'
+import getJwt from '../helper'
 
 
 export default class MenuRight extends Component {
@@ -15,7 +15,7 @@ export default class MenuRight extends Component {
     }
 
     didUserIsHere() {
-        const jwt = getjwt();
+        const jwt = getJwt();
         if (jwt) {
             this.setState({ user: true })
         }

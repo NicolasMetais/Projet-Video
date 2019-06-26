@@ -1,0 +1,103 @@
+
+#MenuClose {
+    background-color:rgb(34, 32, 32, 0.97);
+    width: 100%;
+    height: 100%;
+}
+
+
+#MenuLeftClose {
+    display: flex;
+    flex-direction: column;
+    color: #FFFF;
+    position: absolute;
+    align-self: flex-start;
+    background-color:rgb(34, 32, 32, 0.97);
+    height: 91.9%;
+    width: 4%;
+    left: 0;
+    top: 8%;
+}
+
+#UlMenu {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    position: sticky;
+    top: 8%;
+}
+
+.paddingtop {
+    padding-top: 5%;
+}
+
+.paddingbot {
+    padding-bottom: 5%;
+}
+
+.Link {
+    border-bottom: ridge 1px rgba(10, 10, 10, 0.9);
+    margin-bottom: 0%;
+}
+
+
+.MenuImgClose {
+    width: 58.20%;
+    margin-bottom: 4%;
+    margin-right: 17%;
+    height: 1%;
+}
+
+.active {
+    color: white;
+}
+
+
+.LiMenuClose:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+.LiMenuClose2:hover{
+    background-color: rgb(77, 75, 75);
+}
+
+
+.LiMenuClose{
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+    padding-top: 20%;
+    padding-bottom: 15%;
+    margin-top: 5%;
+    width: 79%;
+    height: 50%;
+    flex-wrap: wrap;
+}
+
+.LiMenuClose2{
+    display:flex;
+    justify-content: center;
+    padding-left: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    width: 79%;
+    height: 50%;
+    flex-wrap: wrap;
+}
+
+.MenuLinkClose {
+    font-size: 0.53rem;
+    width: 100%;
+    text-decoration: none;
+    color: #FFFF;
+}
+
+#UlFooterClose {
+    display: none;
+}
+
+
+.LinkFoot {
+    text-decoration: none;
+    color: #FFFFFF;
+}

@@ -49,7 +49,7 @@ export default class Login extends Component {
             headers: { 'Content-Type': 'application/Json' },
             body: JSON.stringify(this.state)
         }).then(function (res) {
-            if (res.status == 201) {
+            if (res.status === 201) {
                 return res.text();
             }
         }).then(function (res) {
@@ -64,8 +64,6 @@ export default class Login extends Component {
 
     }
 
-
-
     InputChange(e) {
         const { value, name } = e.target;
         this.setState({
@@ -77,7 +75,7 @@ export default class Login extends Component {
         return (
             <div id="LogIn" ref={node => { this.node = node; }}>
                 <div id="profil" >
-                    <img id="ProfilImg" src="Images/Profil.png" onClick={this.handleClick} />
+                    <img id="ProfilImg" src="Images/Profil.png" alt="Profil" onClick={this.handleClick} />
                 </div>
                 {this.state.popupVisible && (
                     <div id="DivFormLogIn">

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './LessView.css'
 
-export default class LessView extends Component {
+export default class Category extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            catego: '',
             toggle: false
         }
     }
@@ -17,14 +17,17 @@ export default class LessView extends Component {
             document.getElementById('container').style.width = 91.5 + "%";
         }
     }
-    componentWillMount(toggled) {
+
+    componentWillMount() {
         this.state.toggle = this.props.toggle
+        this.state.catego = this.props.category
         console.log(this.state.toggle);
     }
+
     render() {
         return (
-            <div id="container">
-                <h1> Je suis LessView</h1 >
+            <div>
+                <h1> testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1 >
             </div>
         )
     }

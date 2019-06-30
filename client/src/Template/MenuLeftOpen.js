@@ -26,42 +26,51 @@ export default class MenuLeftOpen extends Component {
         if (this.state.user === true) {
             return (
                 <nav id="MenuLeftOpen">
-                    <div id='MenuOpen'>
-                        <ul id="UlMenu">
-                            <NavLink activeClassname="active" to="/" className='MenuLinkOpen'>
-                                <li className='LiMenuOpen paddingtop'>
-                                    <img className='MenuImgOpen' src='Images/Home.png' alt="" />
-                                    <p>Home</p>
-                                </li>
-                            </NavLink>
+                    <ul id="UlMenu">
+                        <NavLink activeClassname="active" to="/" className='MenuLinkOpen'>
+                            <li className='LiMenuOpen'>
+                                <img className='MenuImgOpen' src='Images/Home.png' alt="" />
+                                <h5 className="h5Menu">Home</h5>
+                            </li>
+                        </NavLink>
+                        <NavLink activeClassname="active" to="/LessView" className='MenuLinkOpen'>
                             <li className='LiMenuOpen'>
                                 <img className='MenuImgOpen' src="Images/View.png" alt="" />
-                                <NavLink activeClassname="active" to="/LessView" className='MenuLinkOpen'>Less View</NavLink>
+                                <h5 className="h5Menu">Less View</h5>
                             </li>
-                            <li className='LiMenuOpen paddingbottom' >
+                        </NavLink>
+                        <NavLink activeClassname="active" to="/Follow" className='MenuLinkOpen'>
+                            <li className='LiMenuOpen' >
                                 <img className='MenuImgOpen' src="Images/Follow.png" alt="" />
-                                <NavLink activeClassname="active" to="/Follow" className='MenuLinkOpen'>Follow</NavLink>
+                                <h5 className="h5Menu">Follow</h5>
                             </li>
-
-                            <div className="Link">
-                            </div>
+                        </NavLink>
+                        <div className="Link">
+                        </div>
+                        <NavLink activeClassname="active" to="/Playlist" className='MenuLinkOpen'>
                             <li className='LiMenuOpen2'>
                                 <img className='MenuImgOpen' src='Images/Playlist.png' alt="" />
-                                <NavLink activeClassname="active" to="/Playlist" className='MenuLinkOpen'>Playlist</NavLink>
+                                <h5 className="h5Menu">Playlist</h5>
                             </li>
-                        </ul>
-                        <ul id='UlFooterOpen'>
+                        </NavLink>
+                    </ul>
+                    <ul id='UlFooterOpen'>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/About">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/About"> About</NavLink>
+                                About
                             </li>
+                        </NavLink>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/Contact">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/Contact"> Contact Us </NavLink>
+                                Contact Us
                             </li>
+                        </NavLink>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/CGU">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/CGU">CGU</NavLink>
+                                CGU
                             </li>
-                        </ul>
-                    </div>
+                        </NavLink>
+                    </ul>
                 </nav >
 
             );
@@ -69,31 +78,37 @@ export default class MenuLeftOpen extends Component {
         } else {
             return (
                 <nav id="MenuLeftOpen">
-                    <div id='MenuOpen'>
-                        <ul id="UlMenu">
-                            <li className='LiMenuOpen paddingtop'>
+                    <ul id="UlMenu">
+                        <NavLink activeClassname="active" to="/" className='MenuLinkOpen'>
+                            <li className='LiMenuOpen '>
                                 <img className='MenuImgOpen' src='Images/Home.png' alt="" />
-                                <NavLink activeClassname="active" to="/" className='MenuLinkOpen'>Home</NavLink>
+                                <h5 className="h5Menu">Home</h5>
                             </li>
-                            <NavLink activeClassname="active" to="/LessView" className='MenuLinkOpen'>
-                                <li className='LiMenuOpen'>
-                                    <img className='MenuImgOpen' src="Images/View.png" alt="" />
-                                    <p>Less View</p>>
-                                </li>
-                            </NavLink>
-                        </ul>
-                        <ul id='UlFooterOpen'>
+                        </NavLink>
+                        <NavLink activeClassname="active" to="/LessView" className='MenuLinkOpen'>
+                            <li className='LiMenuOpen'>
+                                <img className='MenuImgOpen' src="Images/View.png" alt="" />
+                                <h5 className="h5Menu">Less View</h5>
+                            </li>
+                        </NavLink>
+                    </ul>
+                    <ul id='UlFooterOpen'>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/About">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/About"> About</NavLink>
+                                <h5 className="h5Menu">About</h5>
                             </li>
+                        </NavLink>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/Contact">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/Contact"> Contact Us </NavLink>
+                                <h5 className="h5Menu">Contact Us </h5>
                             </li>
+                        </NavLink>
+                        <NavLink className="LinkFoot" activeClassname="active" to="/CGU">
                             <li className="LiFooter">
-                                <NavLink className="LinkFoot" activeClassname="active" to="/CGU">CGU</NavLink>
+                                <h5 className="h5Menu">CGU</h5>
                             </li>
-                        </ul>
-                    </div>
+                        </NavLink>
+                    </ul>
                 </nav >
             )
         }

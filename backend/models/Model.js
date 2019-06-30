@@ -10,20 +10,24 @@ var model = function (data) {
         this.leftJoinTable = data.leftJoinTable,
         this.leftJoinOn = data.leftJoinOn,
         this.tableWhere = data.tableWhere,
-        this.value = data.value;
+        this.value = data.value,
+        this.orderBy = data.orderBy,
+        this.pickOrder = data.pickOrder,
+        this.tableWhereAND = data.tableWhereAND,
+        this.limit = data.limit;
 }
 
 //Select with the possibility of LEFT JOIN or/and WHERE
 model.selectSomething = function (data, result) {
     var column = data.column,
         table = data.table,
-        query = "SELECT " + column + " FROM " + table;
+        query = "SELECT" + column + " FROM " + table;
 
     if (data.leftJoinTable !== undefined) {
         var leftJoinTable = data.leftJoinTable,
             leftJoinOn = data.leftJoinOn;
 
-        for (var i = 0; i < data.leftJoinTable.length; i++) {
+        for (var i = 0; i < leftJoinTable.length; i++) {
             query = query + " LEFT JOIN " + leftJoinTable[i] + " ON " + leftJoinOn[i];
         }
     }
@@ -31,9 +35,27 @@ model.selectSomething = function (data, result) {
     if (data.tableWhere !== undefined) {
         var where = data.where;
         var tableWhere = data.tableWhere;
-        query = query + " WHERE " + tableWhere + " = " + sql.escape(where)
-
+        if (Array.isArray(where) !== true) query = query + " WHERE " + tableWhere + " = " + sql.escape(where)
     }
+
+    if (Array.isArray(where) === true) {
+        var where = data.where,
+            tableWhere = data.tableWhere
+        query = query + " WHERE " + tableWhere + " IN (" + sql.escape(where) + ")"
+    }
+
+    if (data.orderBy === true) {
+        var value = data.value,
+            pickOrder = data.pickOrder;
+        query = query + " ORDER BY " + value + pickOrder
+    }
+
+    if (data.limit !== undefined) {
+        var limit = data.limit;
+        query = query + " LIMIT " + limit
+    }
+
+    console.log(query);
     sql.query(query, function (err, res) {
         if (err) result(null, err);
         result(null, res);

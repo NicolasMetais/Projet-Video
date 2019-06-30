@@ -20,23 +20,12 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      toggle: true
+      toggle: false
     }
     this.switchedInDaddy = this.switchedInDaddy.bind(this);
   }
   switchedInDaddy(toggled) {
     this.setState({ toggle: toggled });
-  }
-
-  componentDidUpdate() {
-    if (this.state.toggle === true) {
-      document.getElementById('container').style.marginLeft = 16.5 + "%";
-      document.getElementById('container').style.width = 79 + "%";
-    } else {
-      document.getElementById('container').style.marginLeft = 4 + "%";
-      document.getElementById('container').style.width = 91.5 + "%";
-    }
-
   }
 
   render() {
@@ -46,19 +35,23 @@ export default class App extends Component {
     return (
       <div id="Main">
         <Router>
-          <Header switchInDaddy={this.switchedInDaddy} />
-          {MenuLeft}
-          <Switch>
-            <Route exact path="/" render={(props) => <Home {...props} toggle={this.state.toggle} />} />
-            <Route path="/LessView" render={(props) => <LessView {...props} toggle={this.state.toggle} />} />
-            <Route path="/Follow" render={(props) => <Follow {...props} toggle={this.state.toggle} />} />
-            <Route path="/Playlist" render={(props) => <Playlist {...props} toggle={this.state.toggle} />} />
-            <Route path="/About" render={(props) => <About {...props} toggle={this.state.toggle} />} />
-            <Route path="/Contact" render={(props) => <Contact {...props} toggle={this.state.toggle} />} />
-            <Route path="/CGU" render={(props) => <CGU {...props} toggle={this.state.toggle} />} />
-            <Route render={(props) => <Home {...props} toggle={this.state.toggle} />} />
-          </Switch>
-          <MenuRight />
+          <div id="flex-header">
+            <Header switchInDaddy={this.switchedInDaddy} />
+          </div>
+          <div id="flex-container">
+            {MenuLeft}
+            <Switch>
+              <Route exact path="/" render={(props) => <Home {...props} toggle={this.state.toggle} />} />
+              <Route path="/LessView" render={(props) => <LessView {...props} toggle={this.state.toggle} />} />
+              <Route path="/Follow" render={(props) => <Follow {...props} toggle={this.state.toggle} />} />
+              <Route path="/Playlist" render={(props) => <Playlist {...props} toggle={this.state.toggle} />} />
+              <Route path="/About" render={(props) => <About {...props} toggle={this.state.toggle} />} />
+              <Route path="/Contact" render={(props) => <Contact {...props} toggle={this.state.toggle} />} />
+              <Route path="/CGU" render={(props) => <CGU {...props} toggle={this.state.toggle} />} />
+              <Route render={(props) => <Home {...props} toggle={this.state.toggle} />} />
+            </Switch>
+            <MenuRight />
+          </div>
         </Router>
       </div >
     );

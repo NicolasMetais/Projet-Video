@@ -1,9 +1,13 @@
 #MenuRight {
     background-color:rgb(34, 32, 32, 0.97);
-    width: 4.5%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 8%;
-    align-self: flex-end;
+    width: 4.1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfilMenuPic {
+    width: 75%;
+    height: 85%;
+    margin-left: 12%;
+    margin-top: 5%;
 }

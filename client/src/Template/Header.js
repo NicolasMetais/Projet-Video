@@ -7,7 +7,7 @@ export default class Header extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            toggle: false
+            toggle: true
         }
         this.handleclick = this.handleclick.bind(this);
     }

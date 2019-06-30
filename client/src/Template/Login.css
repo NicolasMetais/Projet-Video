@@ -4,6 +4,7 @@
 
 #DivFormLogIn{
     background-color:rgb(56, 56, 56);
+    position: relative;
     color: #FFFF;
     border: solid 1px black;
     border-radius: 5px;

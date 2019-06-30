@@ -4,9 +4,10 @@ var model = require('../models/Model');
 exports.getVideos = function (req, res) {
     var video = new model(req.body);
     video.table = 'videos';
-    video.column = [' videos.video_id', 'videos.title', 'videos.view', 'videos.resume_video', 'videos.creation_date', 'videos.img', 'videos.link', 'videos.user_id', 'videos.category_id', 'users.pseudo', 'categories.text_category'];
+    video.column = [' videos.video_id', 'videos.title', 'videos.view', 'videos.resume_video', 'videos.creation_date', 'videos.img', 'videos.link', 'videos.user_id', 'videos.category_id', 'users.pseudo', 'users.profilPic', 'categories.text_category'];
     video.leftJoinTable = ['users', 'categories'];
     video.leftJoinOn = ['videos.user_id = users.user_id', 'videos.category_id = categories.category_id'];
+    console.log(video)
     model.selectSomething(video, function (err, data) {
         if (err) {
             res.send(err);
@@ -17,13 +18,46 @@ exports.getVideos = function (req, res) {
     })
 };
 
-//Get a single video 
+//Get videos from a Category
+exports.getVideosCatego = function (req, res) {
+    console.log(req.body)
+    var video = new model(req.body);
+    video.table = 'videos';
+    video.column = [' videos.video_id', 'videos.title', 'videos.view', 'videos.resume_video', 'videos.creation_date', 'videos.img', 'videos.link', 'videos.user_id', 'videos.category_id', 'users.pseudo', 'users.profilPic', 'categories.text_category'];
+    video.leftJoinTable = ['users', 'categories'];
+    video.leftJoinOn = ['videos.user_id = users.user_id', 'videos.category_id = categories.category_id'];
+    if (req.body.pickOrder === ' DESC') {
+        video.orderBy = true;
+        video.value = req.body.VideoGetValue;
+        video.where = undefined;
+    } else {
+        if (req.body.pickOrder === ' ASC') {
+            video.orderBy = true;
+            video.value = req.body.VideoGetValue;
+            video.where = undefined;
+        } else {
+            video.where = req.body.VideoGetValue;
+            video.tableWhere = 'videos.category_id';
+        }
+    }
+
+    model.selectSomething(video, function (err, data) {
+        if (err) {
+            res.send(err);
+        }
+        else {
+            res.json(data);
+        }
+    })
+};
+
+//Get videos from specific users 
 exports.getVideo = function (req, res) {
     var video = new model(req.body);
     video.table = 'videos';
     video.column = ' *';
     video.where = req.body.id
-    video.tableWhere = 'video_id';
+    video.tableWhereAND = 'user_id';
     model.selectSomething(video, function (err, data) {
         if (err) {
             res.send(err);
@@ -57,6 +91,7 @@ exports.putVideo = function (req, res) {
     video.table = 'videos';
     video.where = req.body.id
     video.tableWhere = 'video_id';
+    console.log(video)
     if (req.body.column === 'title' || 'resume_video' || 'category_id' || 'img') {
         model.putSomething(video, function (err, data) {
             if (err) {

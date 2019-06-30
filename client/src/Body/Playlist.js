@@ -8,11 +8,6 @@ export default class Playlist extends Component {
             toggle: false
         }
     }
-    componentDidMount() {
-        if (this.state.toggle === true) {
-            document.getElementById('container').style.marginLeft = 16.5 + "%";
-        } else document.getElementById('container').style.marginLeft = 4 + "%";
-    }
     componentWillMount(toggled) {
         this.state.toggle = this.props.toggle
         console.log(this.state.toggle);

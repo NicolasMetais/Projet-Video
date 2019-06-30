@@ -13,7 +13,6 @@ exports.authenticate = function (req, res) {
         email.column = ' *';
         email.where = req.body.email
         email.tableWhere = 'email';
-        console.log(email);
         //i use my select with the data i want and send my object in it
         model.selectSomething(email, function (err, user) {
             if (err) res.status(400).json(err);
@@ -29,8 +28,6 @@ exports.authenticate = function (req, res) {
                         var token = jwt.sign({ id: user[0].user_id, role: user[0].role_id }, config.token_secret);
                         console.log(token);
                         res.status(201).send(token);
-
-
                     }
                     else
                         res.status(200).json({ authenticate: false, message: "Please verify your email and password." })

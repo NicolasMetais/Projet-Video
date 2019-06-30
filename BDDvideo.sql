@@ -8,8 +8,6 @@ CREATE TABLE videos (
     video_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR
 (100),
-    pseudo VARCHAR
-(50),
     view INT,
     resume_video VARCHAR
 (100),
@@ -23,11 +21,11 @@ CREATE TABLE videos (
 )
 ENGINE=INNODB;
 
-/* INSERT INTO videos
+INSERT INTO videos
 VALUES
     (NULL, 'Salutatouslesamis', 'pseudo1', 0, 'grosse video easy', '1994-04-23', 'image/img.jpg'
         , 'image/videos/coucou.mp4', 2, 1),
-    (NULL, 'huiuhjijbhjijh', 'pseudo2', 1, 'trop bien', '1993-09-29', 'image/img1.png' , 'image/videos/rjfo.mp4', 1, 3); */
+    (NULL, 'huiuhjijbhjijh', 'pseudo2', 1, 'trop bien', '1993-09-29', 'image/img1.png' , 'image/videos/rjfo.mp4', 1, 3);
 
 CREATE TABLE categories (
     category_id INT PRIMARY KEY AUTO_INCREMENT,

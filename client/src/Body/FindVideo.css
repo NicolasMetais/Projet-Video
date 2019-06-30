@@ -1,0 +1,103 @@
+
+#VideoContainer{
+    margin-right: 1%;
+}
+#CategoContainerRow {
+	display: flex;
+}
+
+#CategoContainerColumn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7%;
+    margin-top: 3%;
+}
+
+#VideoContainerColumn{
+    margin-right: 1%;
+    display: flex;
+    margin-bottom: 3%;
+    border-top: 0.5px solid grey
+}
+
+#VideoContainerRow{
+    margin-right: 1%;
+}
+
+#pseudoTitle {
+    display: flex;
+    flex-direction: column;
+}
+
+#VideoRow {
+    width: 210px;
+    height: 119px;
+}
+
+#VideoColumn {
+    width: 256px;
+    height: 147px;
+}
+
+
+#VideoInfosRow {
+    display: flex;
+}
+
+#VideoInfosColumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 2%;
+}
+
+#TitleVideo {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+}
+
+.TitleVideoColumn {
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.flexPseudo{
+    display: flex;
+    margin-bottom: 3%;
+    margin-top: 4%;
+}
+
+.ProfilPic {
+    width: 15%;
+    height: 15%;
+    margin-right: 3%;
+}
+.VideoH6Column {
+    margin: 0;
+    padding: 0;
+    color: grey;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+.H6Column {
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+.VideoH6 {
+    margin: 0;
+    padding: 0;
+    color: grey;
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+

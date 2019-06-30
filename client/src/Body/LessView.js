@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import './LessView.css'
+import FindVideo from './FindVideo';
 
 export default class LessView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            toggle: false
+            videos: []
         }
     }
+
     componentDidMount() {
-        if (this.state.toggle === true) {
-            document.getElementById('container').style.marginLeft = 16.5 + "%";
-            document.getElementById('container').style.width = 79 + "%";
-        } else {
-            document.getElementById('container').style.marginLeft = 4 + "%";
-            document.getElementById('container').style.width = 91.5 + "%";
-        }
+        fetch('/VideosCatego', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/Json' },
+            body: JSON.stringify(this.state)
+        }).then(res =>
+            res.json()
+        ).then(videos =>
+            this.setState({ videos })
+        );
     }
-    componentWillMount(toggled) {
-        this.state.toggle = this.props.toggle
-        console.log(this.state.toggle);
-    }
+
     render() {
         return (
             <div id="container">
-                <h1> Je suis LessView</h1 >
+                <FindVideo VideoGetValue={'videos.view'} pickOrder={' ASC'} flex={'column'} />
             </div>
         )
     }
